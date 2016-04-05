@@ -1,0 +1,30 @@
+{
+  "name": "protector",
+  "version": "1.0.0",
+  "description": "Protects your callbacks from being called twice.",
+  "main": "lib/protector.js",
+  "scripts": {
+    "test": "mocha --require tests/fix_tests.js --compilers coffee:coffee-script ./tests/*.iced",
+    "prepublish": "rm -rf lib && mkdir lib && iced -b -c -o lib/ -I node src/protector.iced"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturoarevalo/protector.git"
+  },
+  "keywords": [
+    "callback",
+    "protect",
+    "duplicate",
+    "twice",
+    "call"
+  ],
+  "author": "Arturo Arévalo",
+  "license": "MIT",
+  "homepage": "https://github.com/arturoarevalo/protector#readme",
+  "bugs": {
+    "url": "https://github.com/arturoarevalo/protector/issues"
+  },
+  "devDependencies": {
+    "iced-coffee-script": "^108.0.9"
+  }
+}
